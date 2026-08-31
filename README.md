@@ -31,6 +31,33 @@ npm run build
 npx tsc --noEmit && npx eslint .
 ```
 
+### GitHub Pages preview
+
+Live at **https://alekspasseo.github.io/home-by-five-site/**
+
+```bash
+npm run deploy:pages
+```
+
+Builds a static export and force-pushes it to the `gh-pages` branch, which Pages
+serves from the root. `gh-pages` holds build output only — never edit or merge it.
+
+To build the export without publishing:
+
+```bash
+npm run build:pages
+```
+
+Output lands in `out/`. Note that Pages serves a project site from a subdirectory, so
+the export sets `basePath` to `/home-by-five-site` and writes a `.nojekyll` marker
+(without it Pages runs the output through Jekyll, which strips every underscore
+directory and takes all of `_next/` with it). `site.url` follows the build target via
+`NEXT_PUBLIC_SITE_URL`, so canonicals, sitemap and robots stay correct on both.
+
+Deploying from a local build rather than GitHub Actions is deliberate: it needs no
+`workflow` token scope and no CI minutes. `npm run build` is untouched and still
+produces a normal server build for a real host.
+
 Stack: Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS v4.
 No UI kit, no animation library, no icon package. Nothing was added that the design
 did not need.

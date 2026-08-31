@@ -53,7 +53,9 @@ cpSync(out, staging, { recursive: true });
 
 const git = (...args) => run("git", args, { cwd: staging });
 
-git("init", "-q", "-b", BRANCH);
+git("init", "-q");
+// `git init -b` needs git 2.28+. symbolic-ref sets the unborn branch on any version.
+git("symbolic-ref", "HEAD", `refs/heads/${BRANCH}`);
 git("config", "user.name", JSON.stringify(AUTHOR_NAME));
 git("config", "user.email", JSON.stringify(AUTHOR_EMAIL));
 git("add", "-A");
