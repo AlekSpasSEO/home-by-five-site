@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
+/*
+  Home by Five design tokens.
+
+  Warm off-white ground, near-black navy ink, one burnt-orange accent and a
+  faded blue secondary. Thin rules instead of shadows. No gradients.
+
+  This is a deliberately single-look brand: the palette is committed to light
+  and does not invert. `color-scheme: light` keeps form controls consistent.
+*/
+
+@theme {
+  --color-bone: #f4f0e7;
+  --color-bone-deep: #eae3d5;
+  --color-paper: #fbf9f5;
+
+  --color-ink: #14181f;
+  --color-ink-soft: #39414f;
+  --color-ink-mute: #6d7583;
+  --color-ink-faint: #9aa0aa;
+
+  --color-accent: #b4441f;
+  --color-accent-deep: #8c3315;
+  --color-accent-wash: #f6e7df;
+
+  --color-blue: #4f6e8f;
+  --color-blue-wash: #e6ecf1;
+
+  --color-rule: #d9d1c1;
+  --color-rule-strong: #b9ae99;
+
+  --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-inter-tight), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --tracking-label: 0.14em;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* Understated paper grain. Sits behind everything, never interactive. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bone);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --- Reusable primitives ------------------------------------------------- */
+
+.u-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-mute);
+}
+
+.u-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.u-underline {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 2px;
+}
+
+/* Numeric tables and metric readouts line up column to column. */
+.u-tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Slider, styled to match the rest of the system rather than the OS. */
+.u-range {
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: var(--color-rule-strong);
+  border-radius: 0;
+}
+.u-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--color-ink);
+  border: 3px solid var(--color-bone);
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0 0 0 1px var(--color-ink);
+}
+.u-range::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+.u-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--color-ink);
+  border: 3px solid var(--color-bone);
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0 0 0 1px var(--color-ink);
+}
+.u-range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px var(--color-accent);
 }
