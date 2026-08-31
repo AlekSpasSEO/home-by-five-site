@@ -6,9 +6,8 @@ franchises, franchisees, multi-location service businesses and local service own
 Primary acquisition offer: the **$150 per location Location Growth Blueprint**. The
 customer owns the research and the strategy whether or not they continue.
 
-Built from the brief in `Home_by_Five_Claude_Code_Website_Prompt-3.docx`
-([Google Doc](https://docs.google.com/document/d/1EodFpYecj-I1UsHhgs9p80Qghpk9HW4m/edit)),
-which stays the source of truth. This README covers what exists and where to change it.
+Built from the internal brief `Home_by_Five_Claude_Code_Website_Prompt-3.docx`, which
+stays the source of truth. This README covers what exists and where to change it.
 
 ---
 
