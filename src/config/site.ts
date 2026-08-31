@@ -14,10 +14,18 @@ export const site = {
     "Home by Five researches, builds and runs the marketing systems behind local service businesses and franchise networks. Priced by location, tied to clear deliverables.",
 
   /**
-   * TODO: replace with the production domain before launch. Used for canonical
-   * URLs, sitemap entries, hreflang and OpenGraph metadata.
+   * Canonical origin. Drives canonical URLs, sitemap entries, hreflang and
+   * OpenGraph metadata.
+   *
+   * Set NEXT_PUBLIC_SITE_URL to override per build target (the GitHub Pages
+   * preview does exactly that).
+   *
+   * TODO: replace this default with the production domain before launch.
    */
-  url: "https://homebyfive.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://homebyfive.com",
+
+  /** Subdirectory the site is served from. Empty on a real domain. */
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
 
   /** TODO: replace with real contact routes. */
   email: "hello@homebyfive.com",

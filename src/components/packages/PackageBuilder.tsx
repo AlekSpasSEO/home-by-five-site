@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { usePathname } from "next/navigation";
 import {
   BUILDER_MODULES,
   computePackage,
@@ -55,8 +54,6 @@ export function PackageBuilder({
   /** Preselects a market, used by the market pages. */
   initialMarket?: string;
 }) {
-  const pathname = usePathname();
-
   const [config, setConfig] = useState<PackageConfig>(() => {
     const base = defaultPackageConfig();
     return initialMarket ? { ...base, markets: [initialMarket] } : base;
@@ -118,8 +115,19 @@ export function PackageBuilder({
     } catch {
       // Private browsing, storage disabled. Not fatal.
     }
-    window.history.replaceState(null, "", `${pathname}?${encodeConfig(config)}`);
-  }, [config, pathname, hydrated]);
+    /*
+      window.location.pathname, not usePathname(). usePathname() returns the
+      route without the deployment's basePath, so under a subdirectory deploy
+      (GitHub Pages) writing it back would rewrite /home-by-five-site/packages/
+      to /packages/ and the share link would 404. replaceState needs the real
+      browser path.
+    */
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}?${encodeConfig(config)}`,
+    );
+  }, [config, hydrated]);
 
   const result = useMemo(() => computePackage(config), [config]);
 

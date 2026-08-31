@@ -13,6 +13,9 @@ import { enabledMarkets } from "@/config/markets";
  * When translated routes ship, add their localized URLs alongside each entry
  * and keep the English URL as x-default in the page's `alternates`.
  */
+// Required for `output: export`: tells Next this route has no dynamic behaviour.
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
