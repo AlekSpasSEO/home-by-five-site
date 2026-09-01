@@ -150,16 +150,33 @@ Set them from a real rate source or a signed-off local price sheet.
 
 ---
 
+## Design system
+
+Palette is drawn from the El Salvador and Panama flags: cobalt blue (`--color-blue`)
+and flag red (`--color-flag`) on warm white, with a gold (`--color-sun`) from the
+Salvadoran coat of arms providing the warmth. Tokens live in `src/app/globals.css`.
+
+Type is Fraunces for headlines, dialled soft and slightly wonky, and Figtree for
+everything else. There is no monospace: it read technical, and the brand is meant to
+sound like a person.
+
+Custom classes (`.u-label`, `.u-display`, `.u-underline`, `.u-highlight`) live inside
+`@layer components`. This matters. Unlayered CSS outranks anything Tailwind puts in a
+layer, so an unlayered `.u-label { color: ... }` silently beats `text-flag` and every
+accent eyebrow renders grey.
+
+### Photography
+
+Thirteen real photographs of family and working life, stored in
+`public/photography` and served from this repo rather than hotlinked, so there is no
+runtime dependency on an image host. Sources and licence are in
+`public/photography/CREDITS.md`.
+
+To swap one: keep the filename, drop in the new file, and update `alt` in
+`src/config/photography.ts` plus the row in CREDITS.md. Nothing else references the
+files.
+
 ## What is deliberately not finished
-
-### Photography — all 12 slots are placeholders
-
-`src/config/photography.ts` defines twelve slots. Every one renders an art-directed
-placeholder stating the shot it stands in for. **No stock images were wired in.** The
-brief bans posed studio work, luxury interiors and the single-culture nuclear-family
-cliche, and unvetted stock lands on all three. Each slot carries the shot it needs and
-sourcing direction. Set `src` on a slot to drop a real image in; if it is remote, add
-the host to `next.config.ts`.
 
 ### Lead form — no backend
 
@@ -185,6 +202,13 @@ client numbers without permission.
 sitemap, hreflang and OpenGraph. Set it before launch. `site.email` is a placeholder too.
 
 ---
+
+## In progress
+
+Per-market localized site versions (each market in its own language, with pricing set
+for that region) are the next piece of work. Today every market page is published in
+English, and prices are shown in the base currency. See **Markets and localization**
+above for the state of the architecture.
 
 ## Needs a decision before launch
 
