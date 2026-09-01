@@ -39,7 +39,7 @@ export function LocationSlider({
             max={MAX_LOCATIONS}
             value={value}
             onChange={(e) => onChange(clamp(Number(e.target.value)))}
-            className="u-display u-tnum w-32 border-b-2 border-ink bg-transparent pb-1 text-5xl text-ink outline-none focus:border-accent"
+            className="u-display u-tnum w-32 border-b-2 border-ink bg-transparent pb-1 text-5xl text-ink outline-none focus:border-flag"
           />
           <span className="u-label">
             {atMax ? "locations or more" : value === 1 ? "location" : "locations"}
@@ -47,7 +47,7 @@ export function LocationSlider({
         </div>
 
         {discount > 0 ? (
-          <p className="u-label text-accent">
+          <p className="u-label text-flag">
             Network rate applied: {Math.round(discount * 100)}% off monthly
           </p>
         ) : null}
@@ -70,9 +70,9 @@ export function LocationSlider({
             type="button"
             onClick={() => onChange(preset)}
             aria-pressed={value === preset}
-            className={`u-tnum border px-3.5 py-2 font-mono text-[0.75rem] transition-colors ${
+            className={`u-tnum border px-3.5 py-2 font-sans text-[0.75rem] transition-colors ${
               value === preset
-                ? "border-ink bg-ink text-bone"
+                ? "border-ink bg-ink text-cream"
                 : "border-rule-strong text-ink-soft hover:border-ink"
             }`}
           >

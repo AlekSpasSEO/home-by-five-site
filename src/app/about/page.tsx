@@ -37,7 +37,7 @@ export default function AboutPage() {
         eyebrow="About"
         title="Somebody has to own the whole picture."
         lede="Home by Five exists because too many business owners end up managing the people who were supposed to make marketing easier."
-        aside={<FamilyImage slot="team-pod" aspect="landscape" />}
+        aside={<FamilyImage slot="quiet-moment" aspect="landscape" />}
       />
 
       <Section tone="paper">
@@ -86,7 +86,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="deep">
+      <Section tone="sand">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
             <SectionHeading

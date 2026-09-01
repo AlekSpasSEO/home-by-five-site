@@ -55,7 +55,7 @@ export function ServiceGrid({
           <Link
             key={category.id}
             href={`/services#${category.id}`}
-            className="group bg-paper p-6 transition-colors hover:bg-bone-deep"
+            className="group bg-paper p-6 transition-colors hover:bg-sky"
           >
             {body}
           </Link>
@@ -104,7 +104,7 @@ export function ServiceCatalog({
                     </p>
                   ) : null}
                   {unit.approvalRequired ? (
-                    <p className="u-label mt-3 text-accent">Approved individually</p>
+                    <p className="u-label mt-3 text-flag">Approved individually</p>
                   ) : null}
                 </div>
 

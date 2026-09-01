@@ -25,7 +25,7 @@ export function FAQ({
               </span>
               <span
                 aria-hidden
-                className="relative mt-2 h-3 w-3 shrink-0 text-accent"
+                className="relative mt-2 h-3 w-3 shrink-0 text-flag"
               >
                 <span className="absolute left-0 top-1/2 h-px w-3 -translate-y-1/2 bg-current" />
                 <span className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-current transition-transform group-open:scale-y-0" />

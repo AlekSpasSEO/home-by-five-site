@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="bg-bone py-14 sm:py-20">
+    <section className="bg-cream py-14 sm:py-20">
       <Container width="wide">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
                 Prefer email?{" "}
                 <a
                   href={`mailto:${site.email}`}
-                  className="underline decoration-accent underline-offset-4 hover:text-accent"
+                  className="underline decoration-flag underline-offset-4 hover:text-flag"
                 >
                   {site.email}
                 </a>

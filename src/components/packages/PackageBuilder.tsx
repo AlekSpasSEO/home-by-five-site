@@ -33,7 +33,7 @@ function Step({
   return (
     <section className="border-t border-rule pt-10">
       <div className="flex items-baseline gap-4">
-        <span className="u-label u-tnum text-accent">{n}</span>
+        <span className="u-label u-tnum text-flag">{n}</span>
         <div>
           <h2 className="u-display text-2xl text-ink sm:text-3xl">{title}</h2>
           {lede ? (
@@ -180,34 +180,34 @@ export function PackageBuilder({
                   onClick={() => toggleModule(mod.id)}
                   aria-pressed={active}
                   className={`flex items-start gap-3 p-5 text-left transition-colors ${
-                    active ? "bg-ink text-bone" : "bg-paper hover:bg-bone-deep"
+                    active ? "bg-ink text-cream" : "bg-paper hover:bg-sky"
                   }`}
                 >
                   <span
                     aria-hidden
                     className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center border ${
-                      active ? "border-accent bg-accent" : "border-rule-strong"
+                      active ? "border-flag bg-flag" : "border-rule-strong"
                     }`}
                   >
-                    {active ? <span className="block h-1.5 w-1.5 bg-bone" /> : null}
+                    {active ? <span className="block h-1.5 w-1.5 bg-cream" /> : null}
                   </span>
                   <span>
                     <span
                       className={`block text-[0.9375rem] font-medium ${
-                        active ? "text-bone" : "text-ink"
+                        active ? "text-cream" : "text-ink"
                       }`}
                     >
                       {mod.label}
                     </span>
                     <span
                       className={`mt-1 block text-[0.8125rem] leading-snug ${
-                        active ? "text-bone/60" : "text-ink-mute"
+                        active ? "text-cream/60" : "text-ink-mute"
                       }`}
                     >
                       {mod.blurb}
                     </span>
                     {mod.flag && active ? (
-                      <span className="u-label mt-2 block text-accent">
+                      <span className="u-label mt-2 block text-flag">
                         {mod.flag}
                       </span>
                     ) : null}
@@ -261,7 +261,7 @@ export function PackageBuilder({
             <table className="w-full text-left">
               <caption className="sr-only">Package line items</caption>
               <thead>
-                <tr className="u-label border-b border-rule bg-bone-deep">
+                <tr className="u-label border-b border-rule bg-sky">
                   <th scope="col" className="px-4 py-3 font-medium">
                     Item
                   </th>

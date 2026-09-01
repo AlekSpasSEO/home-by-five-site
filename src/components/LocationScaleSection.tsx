@@ -38,7 +38,7 @@ export function LocationScaleSection({ invert = false }: { invert?: boolean }) {
     <div>
       <div
         className={`grid gap-px border ${
-          invert ? "border-bone/20 bg-bone/20" : "border-rule bg-rule"
+          invert ? "border-cream/20 bg-cream/20" : "border-rule bg-rule"
         } sm:grid-cols-2 lg:grid-cols-5`}
       >
         {SCALES.map((scale) => (
@@ -48,24 +48,24 @@ export function LocationScaleSection({ invert = false }: { invert?: boolean }) {
           >
             <p
               className={`u-display u-tnum text-4xl ${
-                invert ? "text-bone" : "text-ink"
+                invert ? "text-cream" : "text-ink"
               }`}
             >
               {scale.count}
             </p>
-            <p className={`u-label mt-1 ${invert ? "text-bone/50" : ""}`}>
+            <p className={`u-label mt-1 ${invert ? "text-cream/50" : ""}`}>
               {scale.label}
             </p>
             <p
               className={`mt-5 text-[0.9375rem] font-medium ${
-                invert ? "text-bone/90" : "text-ink"
+                invert ? "text-cream/90" : "text-ink"
               }`}
             >
               {scale.who}
             </p>
             <p
               className={`mt-2 text-[0.8125rem] leading-relaxed ${
-                invert ? "text-bone/55" : "text-ink-mute"
+                invert ? "text-cream/55" : "text-ink-mute"
               }`}
             >
               {scale.note}
@@ -76,7 +76,7 @@ export function LocationScaleSection({ invert = false }: { invert?: boolean }) {
 
       <p
         className={`mt-8 max-w-2xl text-lg leading-relaxed ${
-          invert ? "text-bone/75" : "text-ink-soft"
+          invert ? "text-cream/75" : "text-ink-soft"
         }`}
       >
         Your marketing structure should not collapse every time you open another

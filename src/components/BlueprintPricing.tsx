@@ -76,7 +76,7 @@ export function BlueprintPricing({
                 key={page.n}
                 className="flex items-baseline gap-3 border-b border-rule py-2 last:border-b-0 sm:border-b-0"
               >
-                <span className="u-label u-tnum text-accent">{page.n}</span>
+                <span className="u-label u-tnum text-flag">{page.n}</span>
                 <span className="text-[0.9375rem] text-ink-soft">{page.label}</span>
               </li>
             ))}

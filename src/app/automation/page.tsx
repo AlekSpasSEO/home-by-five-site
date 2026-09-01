@@ -104,10 +104,10 @@ export default function AutomationPage() {
             invert
           />
           <div>
-            <div className="grid gap-px border border-bone/20 bg-bone/20 sm:grid-cols-2">
+            <div className="grid gap-px border border-cream/20 bg-cream/20 sm:grid-cols-2">
               {EXAMPLES.map((example) => (
                 <div key={example} className="bg-ink p-4">
-                  <p className="text-[0.875rem] text-bone/75">{example}</p>
+                  <p className="text-[0.875rem] text-cream/75">{example}</p>
                 </div>
               ))}
             </div>

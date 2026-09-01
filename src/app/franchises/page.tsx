@@ -52,7 +52,7 @@ export default function FranchisesPage() {
           label: "Run the blueprint across your network",
         }}
         secondaryCta={{ href: "/packages", label: "Model network pricing" }}
-        aside={<FamilyImage slot="van-end-of-day" aspect="landscape" />}
+        aside={<FamilyImage slot="trade-at-work" aspect="landscape" />}
       />
 
       <Section tone="paper">
@@ -65,7 +65,7 @@ export default function FranchisesPage() {
           {AUDIENCE.map((role) => (
             <li
               key={role}
-              className="border border-rule-strong bg-paper px-4 py-2 font-mono text-[0.6875rem] uppercase tracking-[0.08em] text-ink-soft"
+              className="border border-rule-strong bg-paper px-4 py-2 font-sans text-[0.6875rem] uppercase tracking-[0.08em] text-ink-soft"
             >
               {role}
             </li>
@@ -166,7 +166,7 @@ export default function FranchisesPage() {
         </div>
       </Section>
 
-      <Section tone="deep">
+      <Section tone="sand">
         <SectionHeading
           title="Diagnose the network before you fund the plan."
           lede="Run blueprints across the locations that matter most, see what the markets actually say, then decide what to centralise."

@@ -6,9 +6,9 @@ import { Container } from "@/components/ui";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-rule bg-bone/92 backdrop-blur-sm">
+    <header className="sticky top-0 z-30 border-b border-rule bg-cream/90 backdrop-blur-md">
       <Container width="wide">
-        <div className="flex h-16 items-center justify-between gap-6">
+        <div className="flex h-[4.5rem] items-center justify-between gap-6">
           <Wordmark />
 
           <nav aria-label="Primary" className="hidden lg:block">
@@ -17,7 +17,7 @@ export function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-[0.875rem] text-ink-soft transition-colors hover:text-accent"
+                    className="font-medium text-ink-soft transition-colors hover:text-blue"
                   >
                     {item.label}
                   </Link>
@@ -26,12 +26,12 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-3 lg:flex">
             <Link
-              href="/location-growth-blueprint"
-              className="inline-flex items-center border border-ink bg-ink px-5 py-2.5 font-mono text-[0.6875rem] font-medium uppercase tracking-[0.1em] text-bone transition-colors hover:border-accent hover:bg-accent"
+              href="/contact?intent=blueprint"
+              className="inline-flex items-center rounded-[var(--radius-soft)] bg-flag px-5 py-2.5 font-semibold text-white transition-colors hover:bg-flag-deep"
             >
-              Start a blueprint
+              Start a plan
             </Link>
           </div>
 

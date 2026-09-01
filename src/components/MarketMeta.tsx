@@ -25,7 +25,7 @@ export function CurrencyDisplay({ market }: { market: Market }) {
           : `Catalog prices are published in ${site.baseCurrency}. ${market.currency} pricing is confirmed per engagement rather than converted at a rate that moves.`}
       </p>
       {market.currencyNote ? (
-        <p className="mt-3 border-l-2 border-accent pl-3 text-[0.8125rem] leading-relaxed text-ink-soft">
+        <p className="mt-3 border-l-2 border-flag pl-3 text-[0.8125rem] leading-relaxed text-ink-soft">
           {market.currencyNote}
         </p>
       ) : null}

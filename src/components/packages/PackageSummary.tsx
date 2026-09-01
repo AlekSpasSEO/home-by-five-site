@@ -154,12 +154,12 @@ export function PackageSummary({
       )}
 
       <div className="space-y-3 border-b border-rule px-6 py-5 text-[0.8125rem] leading-relaxed text-ink-mute">
-        <p className="border-l-2 border-accent pl-3 text-ink-soft">
+        <p className="border-l-2 border-flag pl-3 text-ink-soft">
           Indicative package. Final scope is confirmed after your Location Growth
           Blueprint.
         </p>
         {result.hasAdSpend ? (
-          <p className="border border-rule-strong bg-bone-deep px-3 py-2 font-medium text-ink">
+          <p className="border border-rule-strong bg-sky px-3 py-2 font-medium text-ink">
             Ad spend is separate. You pay the platforms directly.
           </p>
         ) : null}
@@ -191,20 +191,20 @@ export function PackageSummary({
       <div className="space-y-3 px-6 py-6">
         <Link
           href={`/contact?intent=blueprint&${encodeConfig(config)}`}
-          className="flex w-full items-center justify-center bg-accent px-5 py-3.5 font-mono text-[0.75rem] font-medium uppercase tracking-[0.1em] text-bone transition-colors hover:bg-accent-deep"
+          className="flex w-full items-center justify-center bg-flag px-5 py-3.5 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-cream transition-colors hover:bg-flag-deep"
         >
           Build my location blueprint
         </Link>
         <Link
           href={`/contact?intent=numbers&${encodeConfig(config)}`}
-          className="flex w-full items-center justify-center border border-rule-strong px-5 py-3.5 font-mono text-[0.75rem] font-medium uppercase tracking-[0.1em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bone"
+          className="flex w-full items-center justify-center border border-rule-strong px-5 py-3.5 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-cream"
         >
           Talk through the numbers
         </Link>
         <button
           type="button"
           onClick={copy}
-          className="w-full py-2 text-center font-mono text-[0.6875rem] uppercase tracking-[0.1em] text-ink-mute underline decoration-rule-strong underline-offset-4 transition-colors hover:text-accent"
+          className="w-full py-2 text-center font-sans text-[0.6875rem] uppercase tracking-[0.1em] text-ink-mute underline decoration-rule-strong underline-offset-4 transition-colors hover:text-flag"
         >
           {copied ? "Summary copied" : "Copy package summary"}
         </button>

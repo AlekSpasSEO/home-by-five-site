@@ -59,7 +59,7 @@ export default function MarketsPage() {
                   className="group grid gap-4 py-6 transition-colors hover:bg-paper sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-10"
                 >
                   <div>
-                    <h3 className="u-display text-2xl text-ink group-hover:text-accent">
+                    <h3 className="u-display text-2xl text-ink group-hover:text-flag">
                       {market.name}
                     </h3>
                     <p className="u-label mt-2">

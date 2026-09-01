@@ -58,9 +58,9 @@ export function QuantityControl({
                 onClick={() => onTier(tier.unitId)}
                 aria-pressed={active}
                 title={unit?.label}
-                className={`border px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.08em] transition-colors ${
+                className={`border px-3 py-1.5 font-sans text-[0.6875rem] uppercase tracking-[0.08em] transition-colors ${
                   active
-                    ? "border-accent bg-accent text-bone"
+                    ? "border-flag bg-flag text-cream"
                     : "border-rule-strong text-ink-soft hover:border-ink"
                 }`}
               >
@@ -83,9 +83,9 @@ export function QuantityControl({
                 onQuantity(option);
               }}
               aria-pressed={active}
-              className={`u-tnum min-w-11 border px-3 py-2 font-mono text-[0.75rem] transition-colors ${
+              className={`u-tnum min-w-11 border px-3 py-2 font-sans text-[0.75rem] transition-colors ${
                 active
-                  ? "border-ink bg-ink text-bone"
+                  ? "border-ink bg-ink text-cream"
                   : "border-rule-strong text-ink-soft hover:border-ink"
               }`}
             >
@@ -110,13 +110,13 @@ export function QuantityControl({
               onChange={(e) =>
                 onQuantity(Math.max(0, Math.min(999, Math.round(Number(e.target.value) || 0))))
               }
-              className="u-tnum w-20 border border-ink bg-transparent px-3 py-2 font-mono text-[0.75rem] text-ink outline-none focus:border-accent"
+              className="u-tnum w-20 border border-ink bg-transparent px-3 py-2 font-sans text-[0.75rem] text-ink outline-none focus:border-flag"
             />
           ) : (
             <button
               type="button"
               onClick={() => setShowCustom(true)}
-              className="border border-rule-strong px-3 py-2 font-mono text-[0.75rem] text-ink-soft transition-colors hover:border-ink"
+              className="border border-rule-strong px-3 py-2 font-sans text-[0.75rem] text-ink-soft transition-colors hover:border-ink"
             >
               Custom
             </button>

@@ -29,30 +29,32 @@ export function Container({
 export function Section({
   children,
   id,
-  tone = "bone",
-  border = true,
+  tone = "cream",
+  border = false,
   className = "",
   width = "default",
 }: {
   children: ReactNode;
   id?: string;
-  tone?: "bone" | "paper" | "ink" | "deep";
+  tone?: "cream" | "paper" | "ink" | "sky" | "sand" | "blue";
   border?: boolean;
   className?: string;
   width?: "default" | "wide" | "narrow";
 }) {
   const tones = {
-    bone: "bg-bone text-ink",
+    cream: "bg-cream text-ink",
     paper: "bg-paper text-ink",
-    deep: "bg-bone-deep text-ink",
-    ink: "bg-ink text-bone",
+    sky: "bg-sky text-ink",
+    sand: "bg-sand text-ink",
+    ink: "bg-ink text-cream",
+    blue: "bg-blue text-white",
   } as const;
   return (
     <section
       id={id}
       className={`relative isolate ${tones[tone]} ${
         border ? "border-t border-rule" : ""
-      } ${tone === "ink" ? "border-ink" : ""} py-16 sm:py-24 ${className}`}
+      } py-16 sm:py-24 ${className}`}
     >
       <Container width={width}>{children}</Container>
     </section>
@@ -69,13 +71,11 @@ export function Eyebrow({
   tone?: "default" | "accent" | "invert";
 }) {
   const tones = {
-    default: "text-ink-mute",
-    accent: "text-accent",
-    invert: "text-bone/60",
+    default: "text-blue",
+    accent: "text-flag",
+    invert: "text-white/70",
   } as const;
-  return (
-    <p className={`u-label ${tones[tone]} ${className}`}>{children}</p>
-  );
+  return <p className={`u-label ${tones[tone]} ${className}`}>{children}</p>;
 }
 
 export function SectionHeading({
@@ -94,9 +94,7 @@ export function SectionHeading({
   size?: "default" | "large";
 }) {
   return (
-    <div
-      className={`${align === "center" ? "mx-auto text-center" : ""} max-w-3xl`}
-    >
+    <div className={`${align === "center" ? "mx-auto text-center" : ""} max-w-3xl`}>
       {eyebrow ? (
         <Eyebrow tone={invert ? "invert" : "default"} className="mb-4">
           {eyebrow}
@@ -107,14 +105,14 @@ export function SectionHeading({
           size === "large"
             ? "text-4xl sm:text-5xl lg:text-6xl"
             : "text-3xl sm:text-4xl lg:text-[2.75rem]"
-        } ${invert ? "text-bone" : "text-ink"}`}
+        } ${invert ? "text-white" : "text-ink"}`}
       >
         {title}
       </h2>
       {lede ? (
         <div
           className={`mt-5 text-lg leading-relaxed ${
-            invert ? "text-bone/70" : "text-ink-soft"
+            invert ? "text-white/75" : "text-ink-soft"
           }`}
         >
           {lede}
@@ -135,16 +133,13 @@ export function Rule({ className = "" }: { className?: string }) {
 type CTAVariant = "primary" | "accent" | "outline" | "quiet" | "invert";
 
 const ctaClasses: Record<CTAVariant, string> = {
-  primary:
-    "bg-ink text-bone border border-ink hover:bg-accent hover:border-accent",
-  accent:
-    "bg-accent text-bone border border-accent hover:bg-accent-deep hover:border-accent-deep",
+  primary: "bg-blue text-white border border-blue hover:bg-blue-deep hover:border-blue-deep",
+  accent: "bg-flag text-white border border-flag hover:bg-flag-deep hover:border-flag-deep",
   outline:
-    "bg-transparent text-ink border border-rule-strong hover:border-ink hover:bg-ink hover:text-bone",
-  invert:
-    "bg-bone text-ink border border-bone hover:bg-accent hover:border-accent hover:text-bone",
+    "bg-transparent text-ink border border-rule-strong hover:border-blue hover:bg-blue hover:text-white",
+  invert: "bg-white text-blue border border-white hover:bg-sun hover:border-sun hover:text-ink",
   quiet:
-    "bg-transparent text-ink border border-transparent underline decoration-accent decoration-2 underline-offset-[6px] hover:text-accent px-0",
+    "bg-transparent text-blue border border-transparent underline decoration-sun decoration-[3px] underline-offset-[6px] hover:text-flag hover:decoration-flag px-0",
 };
 
 export function CTAButton({
@@ -165,12 +160,12 @@ export function CTAButton({
     variant === "quiet"
       ? "py-2"
       : size === "small"
-        ? "px-4 py-2.5 text-xs"
-        : "px-6 py-3.5 text-[0.8125rem]";
+        ? "rounded-[var(--radius-soft)] px-4 py-2.5 text-sm"
+        : "rounded-[var(--radius-soft)] px-6 py-3.5 text-[0.9375rem]";
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center gap-2 font-mono uppercase tracking-[0.1em] font-medium transition-colors duration-150 ${sizing} ${ctaClasses[variant]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 font-semibold transition-colors duration-150 ${sizing} ${ctaClasses[variant]} ${className}`}
       {...rest}
     >
       {children}
@@ -195,22 +190,18 @@ export function MetricCard({
 }) {
   return (
     <div
-      className={`border p-5 ${
-        invert ? "border-bone/20 bg-bone/5" : "border-rule bg-paper"
+      className={`rounded-[var(--radius-soft)] border p-5 ${
+        invert ? "border-white/20 bg-white/5" : "border-rule bg-paper"
       }`}
     >
-      <p className={`u-label ${invert ? "text-bone/50" : ""}`}>{label}</p>
+      <p className={`u-label ${invert ? "text-white/60" : ""}`}>{label}</p>
       <p
-        className={`u-display u-tnum mt-3 text-3xl ${
-          invert ? "text-bone" : "text-ink"
-        }`}
+        className={`u-display u-tnum mt-3 text-3xl ${invert ? "text-white" : "text-ink"}`}
       >
         {value}
       </p>
       {note ? (
-        <p
-          className={`mt-2 text-sm ${invert ? "text-bone/50" : "text-ink-mute"}`}
-        >
+        <p className={`mt-2 text-sm ${invert ? "text-white/60" : "text-ink-mute"}`}>
           {note}
         </p>
       ) : null}
@@ -218,11 +209,8 @@ export function MetricCard({
   );
 }
 
-/** Small numbered marker used in process steps and blueprint page lists. */
 export function Marker({ children }: { children: ReactNode }) {
-  return (
-    <span className="u-label u-tnum text-accent">{children}</span>
-  );
+  return <span className="u-label u-tnum text-flag">{children}</span>;
 }
 
 export function Bullets({
@@ -243,14 +231,14 @@ export function Bullets({
       {items.map((item) => (
         <li
           key={item}
-          className={`flex gap-3 text-[0.9375rem] leading-relaxed ${
+          className={`flex gap-3 leading-relaxed ${
             columns === 2 ? "sm:mb-3 sm:break-inside-avoid" : ""
-          } ${invert ? "text-bone/75" : "text-ink-soft"}`}
+          } ${invert ? "text-white/80" : "text-ink-soft"}`}
         >
           <span
             aria-hidden
-            className={`mt-2.5 h-px w-3 shrink-0 ${
-              invert ? "bg-bone/40" : "bg-accent"
+            className={`mt-2 h-2 w-2 shrink-0 rounded-full ${
+              invert ? "bg-sun" : "bg-flag"
             }`}
           />
           <span>{item}</span>
@@ -270,13 +258,35 @@ export function Note({
 }) {
   return (
     <p
-      className={`border-l-2 py-1 pl-4 text-sm leading-relaxed ${
+      className={`rounded-[var(--radius-soft)] px-4 py-3 leading-relaxed ${
         tone === "accent"
-          ? "border-accent text-ink-soft"
-          : "border-rule-strong text-ink-mute"
+          ? "bg-sun-wash text-ink-soft"
+          : "bg-sky text-ink-soft"
       }`}
     >
       {children}
     </p>
+  );
+}
+
+/** Rounded pill, used for tags and small facts. */
+export function Pill({
+  children,
+  tone = "default",
+}: {
+  children: ReactNode;
+  tone?: "default" | "blue" | "sun";
+}) {
+  const tones = {
+    default: "bg-paper text-ink-soft border-rule",
+    blue: "bg-blue-wash text-blue border-transparent",
+    sun: "bg-sun-wash text-ink border-transparent",
+  } as const;
+  return (
+    <span
+      className={`inline-block rounded-[var(--radius-pill)] border px-3.5 py-1.5 text-sm font-medium ${tones[tone]}`}
+    >
+      {children}
+    </span>
   );
 }

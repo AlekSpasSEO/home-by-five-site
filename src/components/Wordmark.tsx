@@ -25,7 +25,7 @@ export function Wordmark({
   const inner = (
     <span
       className={`u-display inline-flex items-baseline gap-[0.4em] uppercase tracking-[0.06em] ${sizes[size]} ${
-        invert ? "text-bone" : "text-ink"
+        invert ? "text-cream" : "text-ink"
       }`}
     >
       <span className="font-semibold">{site.wordmark.first}</span>
@@ -33,7 +33,7 @@ export function Wordmark({
         {site.wordmark.second}
         <span
           aria-hidden
-          className="absolute -bottom-[0.18em] left-0 h-[0.09em] w-full bg-accent"
+          className="absolute -bottom-[0.18em] left-0 h-[0.09em] w-full bg-flag"
         />
       </span>
     </span>

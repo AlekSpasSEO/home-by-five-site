@@ -13,7 +13,7 @@ import { enabledMarkets, getMarket } from "@/config/markets";
 import { decodeConfig, computePackage, formatMoney, formatNumber } from "@/lib/pricing";
 
 const field =
-  "w-full border border-rule-strong bg-paper px-3.5 py-3 text-[0.9375rem] text-ink outline-none transition-colors placeholder:text-ink-faint focus:border-accent";
+  "w-full border border-rule-strong bg-paper px-3.5 py-3 text-[0.9375rem] text-ink outline-none transition-colors placeholder:text-ink-faint focus:border-flag";
 const labelCls = "u-label mb-2 block";
 
 export function LeadForm() {
@@ -106,7 +106,7 @@ export function LeadForm() {
   if (state === "sent") {
     return (
       <div className="border border-ink bg-paper p-8">
-        <p className="u-label text-accent">Received</p>
+        <p className="u-label text-flag">Received</p>
         <h2 className="u-display mt-4 text-3xl text-ink">
           Thanks. We&apos;ll come back to you with a date, not a discovery call.
         </h2>
@@ -127,8 +127,8 @@ export function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="border border-rule bg-paper p-6 sm:p-8">
       {packageSummary ? (
-        <div className="mb-8 border border-accent bg-accent-wash p-4">
-          <p className="u-label text-accent">From your package</p>
+        <div className="mb-8 border border-flag bg-flag-wash p-4">
+          <p className="u-label text-flag">From your package</p>
           <p className="mt-2 text-[0.875rem] leading-relaxed text-ink-soft">
             {packageSummary}
           </p>
@@ -287,9 +287,9 @@ export function LeadForm() {
                 return (
                   <label
                     key={market.code}
-                    className={`cursor-pointer border px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.06em] transition-colors ${
+                    className={`cursor-pointer border px-3 py-1.5 font-sans text-[0.6875rem] uppercase tracking-[0.06em] transition-colors ${
                       active
-                        ? "border-accent bg-accent text-bone"
+                        ? "border-flag bg-flag text-cream"
                         : "border-rule-strong text-ink-mute hover:border-ink"
                     }`}
                   >
@@ -329,7 +329,7 @@ export function LeadForm() {
       </div>
 
       {error ? (
-        <p role="alert" className="mt-6 border-l-2 border-accent pl-3 text-[0.875rem] text-ink">
+        <p role="alert" className="mt-6 border-l-2 border-flag pl-3 text-[0.875rem] text-ink">
           {error}
         </p>
       ) : null}
@@ -337,7 +337,7 @@ export function LeadForm() {
       <button
         type="submit"
         disabled={state === "sending"}
-        className="mt-8 w-full bg-accent px-6 py-4 font-mono text-[0.75rem] font-medium uppercase tracking-[0.1em] text-bone transition-colors hover:bg-accent-deep disabled:opacity-60 sm:w-auto"
+        className="mt-8 w-full bg-flag px-6 py-4 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-cream transition-colors hover:bg-flag-deep disabled:opacity-60 sm:w-auto"
       >
         {state === "sending" ? "Sending…" : "Send it"}
       </button>

@@ -90,7 +90,7 @@ export function MarketPageTemplate({
           {content.challenges.map((challenge, i) => (
             <div key={challenge.title} className="bg-paper p-7">
               <div className="flex items-baseline gap-4">
-                <span className="u-label u-tnum text-accent">
+                <span className="u-label u-tnum text-flag">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -105,7 +105,7 @@ export function MarketPageTemplate({
         </div>
       </Section>
 
-      <Section tone="deep">
+      <Section tone="sand">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
             <SectionHeading
@@ -121,7 +121,7 @@ export function MarketPageTemplate({
               </Note>
             </div>
             <div className="mt-8">
-              <FamilyImage slot="markets-street" aspect="wide" />
+              <FamilyImage slot="local-shopfront" aspect="wide" />
             </div>
           </div>
           <BlueprintPricing compact />
@@ -176,7 +176,7 @@ export function MarketPageTemplate({
                 {content.regions.map((region) => (
                   <li
                     key={region}
-                    className="border border-rule-strong px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.06em] text-ink-soft"
+                    className="border border-rule-strong px-3 py-1.5 font-sans text-[0.6875rem] uppercase tracking-[0.06em] text-ink-soft"
                   >
                     {region}
                   </li>
@@ -191,13 +191,13 @@ export function MarketPageTemplate({
         <Note>{content.languageNote}</Note>
       </Section>
 
-      <section className="border-t border-ink bg-ink py-16 text-bone sm:py-20">
+      <section className="border-t border-ink bg-ink py-16 text-cream sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <h2 className="u-display text-3xl sm:text-4xl lg:text-5xl">
               Let&apos;s understand {market.name} before we sell you marketing.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-bone/70">
+            <p className="mt-6 text-lg leading-relaxed text-cream/70">
               {formatMoney(BLUEPRINT.pricePerLocation)} per location, one working
               day of analysis each, and you keep the plan whether or not you
               continue.
@@ -212,14 +212,14 @@ export function MarketPageTemplate({
               <CTAButton
                 href="/markets"
                 variant="outline"
-                className="border-bone/30 text-bone hover:bg-bone hover:text-ink"
+                className="border-cream/30 text-cream hover:bg-cream hover:text-ink"
               >
                 All markets
               </CTAButton>
             </div>
-            <p className="mt-8 text-sm text-bone/50">
+            <p className="mt-8 text-sm text-cream/50">
               Operating in a country not listed?{" "}
-              <Link href="/contact" className="underline decoration-accent underline-offset-4">
+              <Link href="/contact" className="underline decoration-flag underline-offset-4">
                 Tell us where
               </Link>
               .

@@ -42,7 +42,7 @@ export default function ServicesPage() {
                 <li key={category.id}>
                   <a
                     href={`#${category.id}`}
-                    className="inline-block border border-rule-strong px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.08em] text-ink-soft transition-colors hover:border-ink hover:bg-ink hover:text-bone"
+                    className="inline-block border border-rule-strong px-3 py-1.5 font-sans text-[0.6875rem] uppercase tracking-[0.08em] text-ink-soft transition-colors hover:border-ink hover:bg-ink hover:text-cream"
                   >
                     {category.label}
                   </a>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
           <CTAButton
             href="/contact"
             variant="outline"
-            className="border-bone/30 text-bone hover:bg-bone hover:text-ink"
+            className="border-cream/30 text-cream hover:bg-cream hover:text-ink"
           >
             Ask about something specific
           </CTAButton>

@@ -66,7 +66,7 @@ export function ROIReportMockup() {
                 height={height}
                 fill={
                   i >= TREND.length - 3
-                    ? "var(--color-accent)"
+                    ? "var(--color-flag)"
                     : "var(--color-blue)"
                 }
                 opacity={i >= TREND.length - 3 ? 1 : 0.45}

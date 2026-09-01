@@ -77,7 +77,7 @@ export default function BlueprintPage() {
         <ol className="mt-12 grid gap-px border border-rule bg-rule sm:grid-cols-3">
           {BLUEPRINT_PAGES.map((page) => (
             <li key={page.n} className="bg-paper p-6">
-              <span className="u-label u-tnum text-accent">Page {page.n}</span>
+              <span className="u-label u-tnum text-flag">Page {page.n}</span>
               <p className="u-display mt-3 text-xl text-ink">{page.label}</p>
             </li>
           ))}

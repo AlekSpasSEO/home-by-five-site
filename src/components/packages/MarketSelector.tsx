@@ -54,12 +54,12 @@ export function MarketSelector({
                         aria-hidden
                         className={`flex h-4 w-4 shrink-0 items-center justify-center border ${
                           active
-                            ? "border-accent bg-accent"
+                            ? "border-flag bg-flag"
                             : "border-rule-strong bg-transparent"
                         }`}
                       >
                         {active ? (
-                          <span className="block h-1.5 w-1.5 bg-bone" />
+                          <span className="block h-1.5 w-1.5 bg-cream" />
                         ) : null}
                       </span>
                       {market.name}
