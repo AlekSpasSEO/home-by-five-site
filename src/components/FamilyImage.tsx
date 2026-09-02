@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getPhotoSlot, type PhotoAspect } from "@/config/photography";
+import { assetPath } from "@/lib/asset";
 
 const aspects: Record<PhotoAspect, string> = {
   portrait: "aspect-[4/5]",
@@ -39,7 +40,7 @@ export function FamilyImage({
       } ${className}`}
     >
       <Image
-        src={photo.src}
+        src={assetPath(photo.src)}
         alt={photo.alt}
         fill
         priority={priority}

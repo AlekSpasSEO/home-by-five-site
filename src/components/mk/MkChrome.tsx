@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { MK } from "@/config/mk";
 import { getMkPhoto, type MkAspect } from "@/config/mk-photography";
+import { assetPath } from "@/lib/asset";
 
 /** Navigation for the Macedonian site. Anchors, because it is one long page. */
 export const MK_NAV = [
@@ -46,7 +47,7 @@ export function MkImage({
       } ${className}`}
     >
       <Image
-        src={photo.src}
+        src={assetPath(photo.src)}
         alt={photo.alt}
         fill
         priority={priority}
