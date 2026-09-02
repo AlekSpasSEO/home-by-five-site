@@ -194,7 +194,7 @@ export default function HomePage() {
       </Section>
 
       {/* Markets, summarised at region level. The full list lives on /markets. */}
-      <Section tone="sand">
+      <Section tone="mist">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
             <SectionHeading
@@ -261,7 +261,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="bg-ink py-20 text-cream sm:py-28">
+      <section className="bg-ink py-20 text-ice sm:py-28">
         <Container>
           <div className="max-w-3xl">
             <h2 className="u-display text-4xl sm:text-5xl lg:text-6xl">

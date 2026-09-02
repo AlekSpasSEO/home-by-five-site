@@ -16,13 +16,13 @@ export function ProcessSteps({
 }) {
   return (
     <ol
-      className={`mt-12 border-t ${invert ? "border-cream/20" : "border-rule"}`}
+      className={`mt-12 border-t ${invert ? "border-ice/20" : "border-rule"}`}
     >
       {steps.map((step) => (
         <li
           key={step.n}
           className={`grid gap-4 border-b py-8 sm:grid-cols-[auto_1fr] sm:gap-10 ${
-            invert ? "border-cream/20" : "border-rule"
+            invert ? "border-ice/20" : "border-rule"
           }`}
         >
           <span className="u-label u-tnum text-flag sm:w-16 sm:pt-1">
@@ -32,14 +32,14 @@ export function ProcessSteps({
             <div>
               <h3
                 className={`u-display text-2xl ${
-                  invert ? "text-cream" : "text-ink"
+                  invert ? "text-ice" : "text-ink"
                 }`}
               >
                 {step.title}
               </h3>
               <p
                 className={`mt-3 max-w-md text-[0.9375rem] leading-relaxed ${
-                  invert ? "text-cream/65" : "text-ink-soft"
+                  invert ? "text-ice/65" : "text-ink-soft"
                 }`}
               >
                 {step.body}
@@ -51,7 +51,7 @@ export function ProcessSteps({
                   <li
                     key={d}
                     className={`text-[0.8125rem] ${
-                      invert ? "text-cream/45" : "text-ink-mute"
+                      invert ? "text-ice/45" : "text-ink-mute"
                     }`}
                   >
                     {d}
@@ -78,7 +78,7 @@ export function ComparisonSection({
   return (
     <div
       className={`mt-12 grid gap-px border ${
-        invert ? "border-cream/20 bg-cream/20" : "border-rule bg-rule"
+        invert ? "border-ice/20 bg-ice/20" : "border-rule bg-rule"
       } lg:grid-cols-3`}
     >
       {columns.map((column) => (
@@ -86,7 +86,7 @@ export function ComparisonSection({
           key={column.title}
           className={`p-7 ${
             column.highlight
-              ? "bg-ink text-cream"
+              ? "bg-ink text-ice"
               : invert
                 ? "bg-ink"
                 : "bg-paper"
@@ -94,14 +94,14 @@ export function ComparisonSection({
         >
           <h3
             className={`u-display text-xl uppercase tracking-wide ${
-              column.highlight || invert ? "text-cream" : "text-ink"
+              column.highlight || invert ? "text-ice" : "text-ink"
             }`}
           >
             {column.title}
           </h3>
           <p
             className={`mt-4 text-[0.9375rem] leading-relaxed ${
-              column.highlight || invert ? "text-cream/70" : "text-ink-soft"
+              column.highlight || invert ? "text-ice/70" : "text-ink-soft"
             }`}
           >
             {column.body}
@@ -109,7 +109,7 @@ export function ComparisonSection({
           {column.note ? (
             <p
               className={`u-label mt-5 ${
-                column.highlight || invert ? "text-cream/40" : "text-ink-faint"
+                column.highlight || invert ? "text-ice/40" : "text-ink-faint"
               }`}
             >
               {column.note}

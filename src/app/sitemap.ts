@@ -33,6 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.6 },
     { path: "/contact", priority: 0.6 },
     { path: "/resources", priority: 0.3 },
+    // The Macedonian site. Its own language, its own audience, its own offer.
+    { path: "/mk", priority: 0.9 },
+    { path: "/mk/kontakt", priority: 0.6 },
   ];
 
   return [

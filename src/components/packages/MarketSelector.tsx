@@ -59,7 +59,7 @@ export function MarketSelector({
                         }`}
                       >
                         {active ? (
-                          <span className="block h-1.5 w-1.5 bg-cream" />
+                          <span className="block h-1.5 w-1.5 bg-ice" />
                         ) : null}
                       </span>
                       {market.name}

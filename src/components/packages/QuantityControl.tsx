@@ -60,7 +60,7 @@ export function QuantityControl({
                 title={unit?.label}
                 className={`border px-3 py-1.5 font-sans text-[0.6875rem] uppercase tracking-[0.08em] transition-colors ${
                   active
-                    ? "border-flag bg-flag text-cream"
+                    ? "border-flag bg-flag text-ice"
                     : "border-rule-strong text-ink-soft hover:border-ink"
                 }`}
               >
@@ -85,7 +85,7 @@ export function QuantityControl({
               aria-pressed={active}
               className={`u-tnum min-w-11 border px-3 py-2 font-sans text-[0.75rem] transition-colors ${
                 active
-                  ? "border-ink bg-ink text-cream"
+                  ? "border-ink bg-ink text-ice"
                   : "border-rule-strong text-ink-soft hover:border-ink"
               }`}
             >

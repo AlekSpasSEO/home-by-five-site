@@ -91,7 +91,7 @@ export default function LocalBusinessPage() {
           <CTAButton
             href="/contact?intent=blueprint"
             variant="outline"
-            className="border-cream/30 text-cream hover:bg-cream hover:text-ink"
+            className="border-ice/30 text-ice hover:bg-ice hover:text-ink"
           >
             Start my blueprint
           </CTAButton>

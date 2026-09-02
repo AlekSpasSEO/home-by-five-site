@@ -86,7 +86,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="sand">
+      <Section tone="mist">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
             <SectionHeading

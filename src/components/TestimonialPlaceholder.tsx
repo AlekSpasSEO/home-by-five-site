@@ -17,7 +17,7 @@ export function TestimonialPlaceholder({
   return (
     <div
       className={`grid gap-px border ${
-        invert ? "border-cream/20 bg-cream/20" : "border-rule bg-rule"
+        invert ? "border-ice/20 bg-ice/20" : "border-rule bg-rule"
       } sm:grid-cols-2 lg:grid-cols-3`}
     >
       {Array.from({ length: count }).map((_, i) => (
@@ -40,7 +40,7 @@ export function TestimonialPlaceholder({
           </div>
           <p
             className={`mt-6 text-[0.75rem] ${
-              invert ? "text-cream/40" : "text-ink-faint"
+              invert ? "text-ice/40" : "text-ink-faint"
             }`}
           >
             Awaiting a real, attributed quote. Nothing invented goes here.

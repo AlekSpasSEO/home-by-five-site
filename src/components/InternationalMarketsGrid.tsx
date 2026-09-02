@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { marketsByRegion } from "@/config/markets";
+import { marketsByRegion, marketHref } from "@/config/markets";
 
 export function InternationalMarketsGrid({
   invert = false,
@@ -13,7 +13,7 @@ export function InternationalMarketsGrid({
   return (
     <div
       className={`grid gap-px border ${
-        invert ? "border-cream/20 bg-cream/20" : "border-rule bg-rule"
+        invert ? "border-ice/20 bg-ice/20" : "border-rule bg-rule"
       } sm:grid-cols-2 lg:grid-cols-4`}
     >
       {regions.map(({ region, markets }) => (
@@ -22,14 +22,14 @@ export function InternationalMarketsGrid({
           className={`p-6 ${invert ? "bg-ink" : "bg-paper"}`}
         >
           <h3
-            className={`u-display text-lg ${invert ? "text-cream" : "text-ink"}`}
+            className={`u-display text-lg ${invert ? "text-ice" : "text-ink"}`}
           >
             {region.label}
           </h3>
           {showBlurb ? (
             <p
               className={`mt-2 text-[0.8125rem] leading-relaxed ${
-                invert ? "text-cream/50" : "text-ink-mute"
+                invert ? "text-ice/50" : "text-ink-mute"
               }`}
             >
               {region.blurb}
@@ -39,17 +39,17 @@ export function InternationalMarketsGrid({
             {markets.map((market) => (
               <li key={market.code}>
                 <Link
-                  href={`/markets/${market.slug}`}
+                  href={marketHref(market)}
                   className={`group flex items-baseline justify-between gap-3 border-b py-1.5 text-[0.9375rem] transition-colors ${
                     invert
-                      ? "border-cream/10 text-cream/75 hover:text-flag"
+                      ? "border-ice/10 text-ice/75 hover:text-flag"
                       : "border-rule text-ink-soft hover:text-flag"
                   }`}
                 >
                   <span>{market.name}</span>
                   <span
                     className={`u-label ${
-                      invert ? "text-cream/30" : "text-ink-faint"
+                      invert ? "text-ice/30" : "text-ink-faint"
                     }`}
                   >
                     {market.currency}

@@ -191,13 +191,13 @@ export function PackageSummary({
       <div className="space-y-3 px-6 py-6">
         <Link
           href={`/contact?intent=blueprint&${encodeConfig(config)}`}
-          className="flex w-full items-center justify-center bg-flag px-5 py-3.5 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-cream transition-colors hover:bg-flag-deep"
+          className="flex w-full items-center justify-center bg-flag px-5 py-3.5 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-ice transition-colors hover:bg-flag-deep"
         >
           Build my location blueprint
         </Link>
         <Link
           href={`/contact?intent=numbers&${encodeConfig(config)}`}
-          className="flex w-full items-center justify-center border border-rule-strong px-5 py-3.5 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-cream"
+          className="flex w-full items-center justify-center border border-rule-strong px-5 py-3.5 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-ice"
         >
           Talk through the numbers
         </Link>

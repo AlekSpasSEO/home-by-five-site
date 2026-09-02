@@ -25,7 +25,7 @@ export function Wordmark({
   const inner = (
     <span
       className={`u-display inline-flex items-baseline gap-[0.4em] uppercase tracking-[0.06em] ${sizes[size]} ${
-        invert ? "text-cream" : "text-ink"
+        invert ? "text-ice" : "text-ink"
       }`}
     >
       <span className="font-semibold">{site.wordmark.first}</span>

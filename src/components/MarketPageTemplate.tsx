@@ -105,7 +105,7 @@ export function MarketPageTemplate({
         </div>
       </Section>
 
-      <Section tone="sand">
+      <Section tone="mist">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
             <SectionHeading
@@ -191,13 +191,13 @@ export function MarketPageTemplate({
         <Note>{content.languageNote}</Note>
       </Section>
 
-      <section className="border-t border-ink bg-ink py-16 text-cream sm:py-20">
+      <section className="border-t border-ink bg-ink py-16 text-ice sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <h2 className="u-display text-3xl sm:text-4xl lg:text-5xl">
               Let&apos;s understand {market.name} before we sell you marketing.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-cream/70">
+            <p className="mt-6 text-lg leading-relaxed text-ice/70">
               {formatMoney(BLUEPRINT.pricePerLocation)} per location, one working
               day of analysis each, and you keep the plan whether or not you
               continue.
@@ -212,12 +212,12 @@ export function MarketPageTemplate({
               <CTAButton
                 href="/markets"
                 variant="outline"
-                className="border-cream/30 text-cream hover:bg-cream hover:text-ink"
+                className="border-ice/30 text-ice hover:bg-ice hover:text-ink"
               >
                 All markets
               </CTAButton>
             </div>
-            <p className="mt-8 text-sm text-cream/50">
+            <p className="mt-8 text-sm text-ice/50">
               Operating in a country not listed?{" "}
               <Link href="/contact" className="underline decoration-flag underline-offset-4">
                 Tell us where

@@ -5,7 +5,7 @@ import { Section, SectionHeading, CTAButton, Note, Bullets } from "@/components/
 import { InternationalMarketsGrid } from "@/components/InternationalMarketsGrid";
 import { FAQ } from "@/components/FAQ";
 import { faqsFor } from "@/config/faq";
-import { marketsByRegion, enabledMarkets } from "@/config/markets";
+import { marketsByRegion, enabledMarkets, marketHref } from "@/config/markets";
 import { getMarketContent } from "@/config/market-content";
 
 export const metadata: Metadata = {
@@ -55,7 +55,7 @@ export default function MarketsPage() {
               return (
                 <Link
                   key={market.code}
-                  href={`/markets/${market.slug}`}
+                  href={marketHref(market)}
                   className="group grid gap-4 py-6 transition-colors hover:bg-paper sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-10"
                 >
                   <div>

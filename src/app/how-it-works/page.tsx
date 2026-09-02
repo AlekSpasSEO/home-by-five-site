@@ -101,7 +101,7 @@ export default function HowItWorksPage() {
         <ProcessSteps steps={STEPS} />
       </Section>
 
-      <Section tone="sand">
+      <Section tone="mist">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <SectionHeading
@@ -133,7 +133,7 @@ export default function HowItWorksPage() {
           <CTAButton
             href="/packages"
             variant="outline"
-            className="border-cream/30 text-cream hover:bg-cream hover:text-ink"
+            className="border-ice/30 text-ice hover:bg-ice hover:text-ink"
           >
             Talk through the numbers
           </CTAButton>

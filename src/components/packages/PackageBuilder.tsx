@@ -180,7 +180,7 @@ export function PackageBuilder({
                   onClick={() => toggleModule(mod.id)}
                   aria-pressed={active}
                   className={`flex items-start gap-3 p-5 text-left transition-colors ${
-                    active ? "bg-ink text-cream" : "bg-paper hover:bg-sky"
+                    active ? "bg-ink text-ice" : "bg-paper hover:bg-sky"
                   }`}
                 >
                   <span
@@ -189,19 +189,19 @@ export function PackageBuilder({
                       active ? "border-flag bg-flag" : "border-rule-strong"
                     }`}
                   >
-                    {active ? <span className="block h-1.5 w-1.5 bg-cream" /> : null}
+                    {active ? <span className="block h-1.5 w-1.5 bg-ice" /> : null}
                   </span>
                   <span>
                     <span
                       className={`block text-[0.9375rem] font-medium ${
-                        active ? "text-cream" : "text-ink"
+                        active ? "text-ice" : "text-ink"
                       }`}
                     >
                       {mod.label}
                     </span>
                     <span
                       className={`mt-1 block text-[0.8125rem] leading-snug ${
-                        active ? "text-cream/60" : "text-ink-mute"
+                        active ? "text-ice/60" : "text-ink-mute"
                       }`}
                     >
                       {mod.blurb}

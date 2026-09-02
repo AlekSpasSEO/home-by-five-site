@@ -10,7 +10,7 @@ import { FamilyImage } from "@/components/FamilyImage";
  */
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden bg-cream">
+    <section className="relative overflow-hidden bg-ice">
       {/* Soft wash behind the type, so the page opens warm rather than white. */}
       <div
         aria-hidden
@@ -82,7 +82,7 @@ export function PageHero({
   aside?: ReactNode;
 }) {
   return (
-    <section className="bg-cream">
+    <section className="bg-ice">
       <Container width="wide">
         <div
           className={`grid gap-10 py-14 sm:py-20 ${

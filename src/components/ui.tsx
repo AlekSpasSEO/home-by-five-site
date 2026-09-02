@@ -29,24 +29,24 @@ export function Container({
 export function Section({
   children,
   id,
-  tone = "cream",
+  tone = "ice",
   border = false,
   className = "",
   width = "default",
 }: {
   children: ReactNode;
   id?: string;
-  tone?: "cream" | "paper" | "ink" | "sky" | "sand" | "blue";
+  tone?: "ice" | "paper" | "ink" | "sky" | "mist" | "blue";
   border?: boolean;
   className?: string;
   width?: "default" | "wide" | "narrow";
 }) {
   const tones = {
-    cream: "bg-cream text-ink",
+    ice: "bg-ice text-ink",
     paper: "bg-paper text-ink",
     sky: "bg-sky text-ink",
-    sand: "bg-sand text-ink",
-    ink: "bg-ink text-cream",
+    mist: "bg-mist text-ink",
+    ink: "bg-ink text-ice",
     blue: "bg-blue text-white",
   } as const;
   return (

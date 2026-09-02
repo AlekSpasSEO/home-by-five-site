@@ -6,7 +6,7 @@ import { Container } from "@/components/ui";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-30 border-b border-rule bg-cream/90 backdrop-blur-md">
+    <header className="sticky top-0 z-30 border-b border-rule bg-ice/90 backdrop-blur-md">
       <Container width="wide">
         <div className="flex h-[4.5rem] items-center justify-between gap-6">
           <Wordmark />

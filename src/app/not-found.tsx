@@ -2,7 +2,7 @@ import { Container, CTAButton, Eyebrow } from "@/components/ui";
 
 export default function NotFound() {
   return (
-    <section className="bg-cream py-24 sm:py-32">
+    <section className="bg-ice py-24 sm:py-32">
       <Container>
         <div className="max-w-2xl">
           <Eyebrow tone="accent">404</Eyebrow>

@@ -72,7 +72,7 @@ export function LocationSlider({
             aria-pressed={value === preset}
             className={`u-tnum border px-3.5 py-2 font-sans text-[0.75rem] transition-colors ${
               value === preset
-                ? "border-ink bg-ink text-cream"
+                ? "border-ink bg-ink text-ice"
                 : "border-rule-strong text-ink-soft hover:border-ink"
             }`}
           >

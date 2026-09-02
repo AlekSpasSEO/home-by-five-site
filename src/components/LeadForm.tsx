@@ -289,7 +289,7 @@ export function LeadForm() {
                     key={market.code}
                     className={`cursor-pointer border px-3 py-1.5 font-sans text-[0.6875rem] uppercase tracking-[0.06em] transition-colors ${
                       active
-                        ? "border-flag bg-flag text-cream"
+                        ? "border-flag bg-flag text-ice"
                         : "border-rule-strong text-ink-mute hover:border-ink"
                     }`}
                   >
@@ -337,7 +337,7 @@ export function LeadForm() {
       <button
         type="submit"
         disabled={state === "sending"}
-        className="mt-8 w-full bg-flag px-6 py-4 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-cream transition-colors hover:bg-flag-deep disabled:opacity-60 sm:w-auto"
+        className="mt-8 w-full bg-flag px-6 py-4 font-sans text-[0.75rem] font-medium uppercase tracking-[0.1em] text-ice transition-colors hover:bg-flag-deep disabled:opacity-60 sm:w-auto"
       >
         {state === "sending" ? "Sending…" : "Send it"}
       </button>

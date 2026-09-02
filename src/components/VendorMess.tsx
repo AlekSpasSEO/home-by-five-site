@@ -38,12 +38,12 @@ export function VendorMess() {
         <span aria-hidden className="h-px flex-1 bg-rule-strong" />
       </div>
 
-      <div className="border border-ink bg-ink px-6 py-7 text-cream sm:px-8">
-        <p className="u-label text-cream/50">One operating system</p>
+      <div className="border border-ink bg-ink px-6 py-7 text-ice sm:px-8">
+        <p className="u-label text-ice/50">One operating system</p>
         <p className="u-display mt-3 text-2xl sm:text-3xl">
           Home by Five connects the work, the numbers and the people running it.
         </p>
-        <p className="mt-4 max-w-2xl text-[0.9375rem] leading-relaxed text-cream/65">
+        <p className="mt-4 max-w-2xl text-[0.9375rem] leading-relaxed text-ice/65">
           One plan, one production system, one report. You stop being the
           integration layer between ten vendors who have never spoken to each
           other.

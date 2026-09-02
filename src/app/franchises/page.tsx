@@ -166,7 +166,7 @@ export default function FranchisesPage() {
         </div>
       </Section>
 
-      <Section tone="sand">
+      <Section tone="mist">
         <SectionHeading
           title="Diagnose the network before you fund the plan."
           lede="Run blueprints across the locations that matter most, see what the markets actually say, then decide what to centralise."

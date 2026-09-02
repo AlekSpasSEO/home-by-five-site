@@ -12,11 +12,11 @@
 */
 
 @theme {
-  /* Grounds */
-  --color-cream: #fffcf5;
+  /* Grounds. A family of light blues rather than a warm neutral. */
+  --color-ice: #f2f7fd;
   --color-paper: #ffffff;
-  --color-sky: #e6f0ff;
-  --color-sand: #fff5df;
+  --color-sky: #e4eefb;
+  --color-mist: #d3e4f7;
 
   /* Ink */
   --color-ink: #0f2038;
@@ -34,13 +34,13 @@
   --color-flag-deep: #be231d;
   --color-flag-wash: #ffe7e5;
 
-  /* Gold, the warmth */
+  /* Gold, kept only as a small accent for highlights and underlines. */
   --color-sun: #ffc531;
   --color-sun-deep: #e0a400;
-  --color-sun-wash: #fff3d4;
+  --color-sun-wash: #eaf2fd;
 
-  --color-rule: #dbe4f2;
-  --color-rule-strong: #a9bdd8;
+  --color-rule: #cfe0f4;
+  --color-rule-strong: #9dbbdd;
 
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-figtree), "Helvetica Neue", Arial, sans-serif;
@@ -72,7 +72,7 @@ html {
 }
 
 body {
-  background-color: var(--color-cream);
+  background-color: var(--color-ice);
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-size: 1.0625rem;

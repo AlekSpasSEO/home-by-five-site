@@ -91,6 +91,12 @@ export interface Market {
   formerCurrency?: string;
   currencyNote?: string;
 
+  /**
+   * A market that has its own localized site links there instead of at the
+   * English research page. The research page stays published either way.
+   */
+  siteHref?: string;
+
   /** Whether the market page is published. */
   enabled: boolean;
   /** Localization state, surfaced honestly in the UI. */
@@ -332,6 +338,9 @@ export const MARKETS: Market[] = [
     targetLanguages: ["Macedonian", "Albanian"],
     spellingNotes:
       "Macedonian in Cyrillic, with Latin transliteration commonly used in search. Albanian-language parity where the audience requires it.",
+    // Macedonia has its own site, in Macedonian. Links point there; the English
+    // market research page stays live at /markets/macedonia.
+    siteHref: "/mk",
     currency: "MKD",
     currencySymbol: "den",
     enabled: true,
@@ -499,6 +508,10 @@ export const marketsByRegion = (): { region: MarketRegion; markets: Market[] }[]
     region,
     markets: enabledMarkets().filter((m) => m.region === region.id),
   })).filter((group) => group.markets.length > 0);
+
+/** Where a market's link should go: its own site if it has one, else the research page. */
+export const marketHref = (market: Market): string =>
+  market.siteHref ?? `/markets/${market.slug}`;
 
 export const regionLabel = (id: MarketRegionId): string =>
   MARKET_REGIONS.find((r) => r.id === id)?.label ?? "";
