@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://alekspasseo.github.io/home-by-five-site
+Sitemap: https://alekspasseo.github.io/home-by-five-site/sitemap.xml
