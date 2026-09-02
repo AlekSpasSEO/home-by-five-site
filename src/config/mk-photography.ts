@@ -1,18 +1,15 @@
 /**
  * Photography for the Macedonian site.
  *
- * ====================== FILES ARE STAND-INS RIGHT NOW ======================
- * Every file in /public/photography/mk is a generated placeholder carrying the
- * shot it represents. The real photographs exist but were supplied as chat
- * attachments, which cannot be written to disk from here.
+ * Real photographs of real Macedonian businesses, supplied by the client and
+ * stored in /public/photography/mk. They are the whole argument for this page:
+ * these are companies of exactly the size and character the site is written
+ * for, which no stock library can imitate.
  *
- * To finish: save each photograph over the file of the same name in
- * public/photography/mk/, then delete scripts/mk-placeholders.py. No code
- * changes are needed. Keep the `alt` text accurate if a subject changes.
- * ==========================================================================
- *
- * These are real Macedonian businesses of exactly the size this site is
- * written for, which is why they are worth using instead of stock.
+ * To replace one: keep the filename, drop in the new file, and keep the `alt`
+ * text accurate to whatever is actually in the frame. Nothing else references
+ * the files. Images are served from this repo, so there is no dependency on an
+ * external host.
  */
 
 export type MkAspect = "landscape" | "portrait" | "wide" | "square";
