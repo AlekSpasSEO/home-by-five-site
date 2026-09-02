@@ -42,8 +42,8 @@
   --color-rule: #cfe0f4;
   --color-rule-strong: #9dbbdd;
 
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-figtree), "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-display-src), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-body-src), "Helvetica Neue", Arial, sans-serif;
 
   --radius-soft: 10px;
   --radius-pill: 999px;
@@ -178,3 +178,4 @@ body {
     cursor: grab;
   }
 }
+
